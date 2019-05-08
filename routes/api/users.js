@@ -23,6 +23,11 @@ router.post("/signup", (req, res) => {
     if (!isValid) {
       return res.status(400).json(errors);
     }
+
+    User.findOne({ name: req.body.name }).then(user => {
+      if (user) {
+        return res.status(400).json({ name: "Username already exists" });
+      } 
   
   User.findOne({ email: req.body.email }).then(user => {
       if (user) {
@@ -47,6 +52,7 @@ router.post("/signup", (req, res) => {
             });
         });
       });
+    });
     }
   );
 

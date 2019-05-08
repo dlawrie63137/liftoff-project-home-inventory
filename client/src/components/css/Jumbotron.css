@@ -1,0 +1,15 @@
+.jumbotron {
+    background-color: lightgrey;
+    background-image: url('../assets/background.jpg');
+    background-position: 5% 10%;
+    height: 350px;
+    color:#600;
+    font: 1em sans-serif;
+}
+.display-3 {
+    text-align: center;
+    margin-top: 10%;
+}
+.lead {
+    text-align: center;
+}
