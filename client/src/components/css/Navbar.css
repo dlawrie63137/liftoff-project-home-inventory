@@ -7,3 +7,7 @@
 .nav-item {
     margin: 0px;
 }
+.nameText {
+    color: rgb(128, 128, 128);
+    margin-left: 40%;
+}

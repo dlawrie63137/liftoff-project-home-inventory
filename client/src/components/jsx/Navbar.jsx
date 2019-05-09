@@ -11,7 +11,8 @@ class Navbar extends Component {
              <span class="navbar-toggler-icon"></span>
            </button>
           <div className="navbar-collapse collapse" id="navbarCollapse">
-            <img className='logo' src={logo} width='75'/>
+            <img className='logo' src={logo} width='80'/>
+              <h3 className="nameText">Home Inventory</h3>
                <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
                      <Link className="nav-link" to="/signup">Sign Up</Link>
