@@ -24,16 +24,18 @@ router.post("/signup", (req, res) => {
       return res.status(400).json(errors);
     }
 
+    // Check if username exists
     User.findOne({ name: req.body.name }).then(user => {
       if (user) {
         return res.status(400).json({ name: "Username already exists" });
       } 
   
+      // Check if email exists
   User.findOne({ email: req.body.email }).then(user => {
       if (user) {
         return res.status(400).json({ email: "Email already exists" });
       } 
-  
+  // If usernae and email are new create new user
   const newUser = new User({
           name: req.body.name,
           email: req.body.email,
