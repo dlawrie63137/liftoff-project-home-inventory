@@ -34,11 +34,11 @@ render() {
               <form className="form-login" noValidate onSubmit={this.handleSubmit}>
                      <h1 className="h3 mb-3 font-weight-normal">Please login to your account</h1>
                      <div className="formInputs">
-                         <label htmlFor="inputEmail" className="sr-only">Email address</label>
-                         <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required={true} autoFocus="" onChange={this.handleChange}
+                         <label htmlFor="email" className="sr-only">Email address</label>
+                         <input type="email" id="email" className="form-control" placeholder="Email address" required={true} autoFocus="" onChange={this.handleChange}
                   value={this.state.email} error={errors.email} /><br />
-                         <label htmlFor="inputPassword" className="sr-only">Password</label>
-                         <input type="password" id="inputPassword" className="form-control" placeholder="Password" required={true} onChange={this.handleChange}
+                         <label htmlFor="password" className="sr-only">Password</label>
+                         <input type="password" id="password" className="form-control" placeholder="Password" required={true} onChange={this.handleChange}
                   value={this.state.password} error={errors.password} /><br />
                          <p></p>
                          <button className="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
