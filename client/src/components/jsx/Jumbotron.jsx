@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import '../css/Jumbotron.css';
+import '../css/jumbotron.css';
 
 
 class Jumbotron extends Component {
     render() {
         return (
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                   <h1 class="display-3">{this.props.title}</h1>
+            <div className="jumbotron jumbotron-fluid">
+                <div className="container">
+                   <h1 className="display-3">{this.props.title}</h1>
                    <p className='lead'>{this.props.subtitle}</p>
                 </div>
             </div>

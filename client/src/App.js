@@ -3,19 +3,23 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
 import Home from './pages/Home.jsx';
-import Signup from './pages/Signup.jsx';
-import Login from './pages/Login.jsx';
+import Navbar from './components/jsx/navbar.jsx';
+import Footer from './components/jsx/footer.jsx';
+import LoginForm from './components/jsx/loginForm.jsx';
+import SignupForm from './components/jsx/signupForm.jsx';
 import Contact from './pages/Contact.jsx';
 
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
+        <Navbar />
         <Route exact path="/" component={Home} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
+        <Route exact path="/signup" component={SignupForm} />
+        <Route exact path="/login" component={LoginForm} />
         <Route path="/contact" component={Contact} />
+        <Footer />
       </div>
     </Router>
   );
