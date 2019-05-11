@@ -25,9 +25,9 @@ router.post("/signup", (req, res) => {
     }
 
     // Check if username exists
-    User.findOne({ name: req.body.name }).then(user => {
+    User.findOne({ username: req.body.username }).then(user => {
       if (user) {
-        return res.status(400).json({ name: "Username already exists" });
+        return res.status(400).json({ username: "Username already exists" });
       } 
   
       // Check if email exists
@@ -35,9 +35,9 @@ router.post("/signup", (req, res) => {
       if (user) {
         return res.status(400).json({ email: "Email already exists" });
       } 
-  // If usernae and email are new create new user
+  // If username and email are new create new user
   const newUser = new User({
-          name: req.body.name,
+          username: req.body.username,
           email: req.body.email,
           password: req.body.password
         });
@@ -88,7 +88,7 @@ router.post("/login", (req, res) => {
           // Create JWT Payload
           const payload = {
             id: user.id,
-            name: user.name
+            username: user.username
           };
   
           // Sign token

@@ -1,17 +1,30 @@
 .form-control {
     max-width: 350px;
-}
-.btn  {
-    max-width: 350px;
+    margin-top: 1%;
+    margin-left: 35%;
+    margin-bottom: 0%;
 }
 .formInputs {
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-top: 15%;
 }
-.h3 {
-    text-align: center;
+
+.red-text {
+    color: red;
+    margin-bottom: 10%;
     margin-left: 1%;
 }
-h1 {
+.text-center {
+    margin-left: 0%;
+    margin-top: 3%;
+}
+.btn {
+    margin-left: 35%;
+    margin-top: 3%;
+}
+.title {
     margin-top: 15%;
+    margin-bottom: -10%;
+}
+h3 {
+    padding-top: 0%;
 }
