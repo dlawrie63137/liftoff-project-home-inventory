@@ -1,0 +1,26 @@
+.login-success {
+    margin-top: 5%;
+    margin-left: 2%;
+    padding-bottom: 10px;
+}
+.success-sub {
+    text-align: left;
+    margin-left: 41%;
+}
+.link-info {
+    text-align: left;
+    margin-left: 27%;
+    margin-top: 3%;
+    padding-bottom: 60px;
+}
+.line-text {
+    margin-bottom: -1%;
+}
+.content {
+    border: 10px;
+    border-color: red;
+    border-style: ridge;
+    margin-top: 15%;
+    background-color: lightgrey;
+    
+}

@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+import Navbar from './navbar.jsx';
 import '../css/signupForm.css';
 
 class SignupForm extends Component {
@@ -16,6 +17,13 @@ class SignupForm extends Component {
       errors: {}
     };
   }
+
+    componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+      if (this.props.auth.isAuthenticated) {
+        this.props.history.push("/success");
+      }
+   }
 
     componentWillReceiveProps(nextProps) {
       if (nextProps.errors) {
@@ -39,9 +47,6 @@ const newUser = {
       confirmPassword: this.state.confirmPassword
     };
 
-console.log(newUser);
-
-
   this.props.registerUser(newUser, this.props.history); 
   };
 
@@ -50,15 +55,16 @@ render() {
 
         return (
                 <div className="container">
+                <Navbar />
                   <form className="form-signin" noValidate onSubmit={this.handleSubmit}>
                      <div className="title">
                             <h3 className="h3 mb-3 font-weight-normal">Please create your account</h3>
                      </div>
                      <div className="formInputs">
-                         <input type="text" id="username" className="form-control" placeholder="Username" required={true} autoFocus="" onChange={this.handleChange} value={this.state.username}
+                         <input type="text" id="username" className="form-control" placeholder="Username" required={true} autoFocus="true" onChange={this.handleChange} value={this.state.username}
                   error={errors.username} />
                          <span className="red-text">{errors.username}</span><br />
-                         <input type="email" id="email" className="form-control" placeholder="Email" required={true} autoFocus="" onChange={this.handleChange} value={this.state.email}
+                         <input type="email" id="email" className="form-control" placeholder="Email" required={true} autoFocus="true" onChange={this.handleChange} value={this.state.email}
                   error={errors.email} />
                          <span className="red-text">{errors.email}</span><br />
                          <input type="password" id="password" className="form-control" placeholder="Password" required={true} onChange={this.handleChange} value={this.state.password}
@@ -84,6 +90,7 @@ SignupForm.propTypes = {
 };
 
 const mapStateToProps = state => ({
+  username: state.username,
   auth: state.auth,
   errors: state.errors
 });

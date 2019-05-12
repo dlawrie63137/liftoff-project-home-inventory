@@ -11,6 +11,7 @@ class Footer extends Component {
                   <ul className="foot-list">
                     <li>&#169; {new Date().getFullYear()}</li>
                     <li>Mongobyte.com</li>
+                    <li>St Louis, MO</li>
                   </ul>
                 </div>
               </div>
