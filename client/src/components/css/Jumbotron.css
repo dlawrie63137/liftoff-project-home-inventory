@@ -1,9 +1,10 @@
 .jumbotron {
     background-color: lightgrey;
     background-image: url('../assets/background.jpg');
-    background-position: 5% 10%;
+    background-position: 33% 20%;
+    background-size: 100%;
     height: 350px;
-    color:#600;
+    color:rgb(160, 8, 8);
     font: 1em sans-serif;
 }
 .display-3 {
