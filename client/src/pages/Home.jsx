@@ -21,7 +21,7 @@ class Home extends Component {
                  when it's time to make a claim, get everything you're entitled to with our Home Inventory
                  application. Click here to<Link to='/signup'> sign up</Link> for your account or use the link on the top right of this page. 
                  </h4>
-                 <p className='citation'>* <Link to='https://www.ncdc.noaa.gov/billions/'>https://www.ncdc.noaa.gov/billions/</Link></p>
+                 <p className='citation'>* <a href='https://www.ncdc.noaa.gov/billions/'>https://www.ncdc.noaa.gov/billions/</a></p>
               </div>
               <Footer />
             </div>
