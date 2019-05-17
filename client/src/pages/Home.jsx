@@ -12,7 +12,7 @@ class Home extends Component {
                 <Navbar />
                 <Jumbotron title='Be Prepared' subtitle='When disaster strikes.'/>
               <div className='container'>
-                 <h4 className='main-text'>According to the National Oceanic and Atmospheric Administartion (NOAA),<br />
+                 <h4 className='main-text'>According to the National Oceanic and Atmospheric Administration (NOAA),<br />
                   natural disasters caused over $90 billion in losses in the US in 2018 alone.*<br />
                  With an up to date home inventory you can ensure that you have the insurance coverage you need when the unthinkable happens.
                  <p></p>
