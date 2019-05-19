@@ -1,0 +1,43 @@
+.addItem {
+    margin-top: 20%;
+    border: 10px;
+    border-color: red;
+    border-style: ridge;
+    padding-top: 0%;
+    padding-right: 2%;
+    padding-left: 1%;
+    padding-bottom: 10%;
+}
+.item-group {
+    margin-top: 10%;
+    margin-left: -3%;
+}
+.location {
+    align-content: center;
+}
+.location-group {
+    padding-left: 0%;
+    max-width: 500px;
+    margin-left: 8%;
+    margin-top: 10%;
+}
+.location-room li {
+    display: block;
+    margin-bottom: 10px;
+	min-height: 35px;
+    
+}
+.value-group {
+    margin-top: 10%;
+    margin-left: -37%;
+}
+.item {
+    max-width: 170px;
+}
+label {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+select {
+    max-width: 350px;
+}

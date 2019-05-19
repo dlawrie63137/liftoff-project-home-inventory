@@ -15,7 +15,7 @@ import SignupForm from './components/jsx/signupForm.jsx';
 import Success from './components/jsx/success.jsx';
 import Contact from './pages/Contact.jsx';
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Add from "./components/jsx/add.jsx";
+import AddForm from "./components/jsx/addForm.jsx";
 import Update from "./components/jsx/update.jsx";
 import Delete from "./components/jsx/delete.jsx";
 import View from "./components/jsx/view.jsx";
@@ -53,7 +53,7 @@ class App extends Component {
                     <Route exact path="/login" component={LoginForm} />
                     <Switch>
                        <PrivateRoute exact path="/success" component={Success} />
-                       <PrivateRoute exact path="/add" component={Add} />
+                       <PrivateRoute exact path="/add" component={AddForm} />
                        <PrivateRoute exact path="/delete" component={Delete} />
                        <PrivateRoute exact path="/update" component={Update} />
                        <PrivateRoute exact path="/view" component={View} />
