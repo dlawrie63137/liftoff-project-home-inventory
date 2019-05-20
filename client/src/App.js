@@ -55,7 +55,7 @@ class App extends Component {
                        <PrivateRoute exact path="/success" component={Success} />
                        <PrivateRoute exact path="/add" component={AddForm} />
                        <PrivateRoute exact path="/delete" component={Delete} />
-                       <PrivateRoute exact path="/update" component={Update} />
+                       <PrivateRoute exact path="/update/:id" component={Update} />
                        <PrivateRoute exact path="/view" component={View} />
                     </Switch>
                     <Route path="/contact" component={Contact} />

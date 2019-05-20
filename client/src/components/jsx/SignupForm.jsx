@@ -57,7 +57,7 @@ render() {
                 <div className="container">
                 <Navbar />
                   <form className="form-signin" noValidate onSubmit={this.handleSubmit}>
-                     <div className="title">
+                     <div className="title-signup">
                             <h3 className="h3 mb-3 font-weight-normal">Please create your account</h3>
                      </div>
                      <div className="formInputs">

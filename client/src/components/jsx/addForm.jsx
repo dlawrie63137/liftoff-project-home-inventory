@@ -5,50 +5,85 @@ import Navbar2 from './navbar2.jsx';
 import '../css/addForm.css';
 
 class AddForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            location: '',
+            room: '',
+            item: '',
+            manufacturer: '',
+            serial_number: '',
+            year_acquired: '',
+            purchase_price: '',
+            user_id: this.props.auth.user.username
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange = e => {
+        this.setState({ [e.target.id]: e.target.value });
+      };
+
+    handleSubmit(e) {
+        e.preventDefault();
+            
+        console.log(`Form submitted:`);
+        console.log(`User Id: ${this.state.user_id}`);
+
+        this.setState({
+            location: '',
+            room: '',
+            item: '',
+            manufacturer: '',
+            serial_number: '',
+            year_acquired: '',
+            purchase_price: '',
+        })
+
+         document.getElementById("addItem").reset();
+      };
   
     render() {
     
      return (
         <div className="container">
             <Navbar2 />
-            <form className='addItem'>
+            <div className='title-add'>
+                <h2>Add Item</h2>
+            </div>
+            <form className='addItem' id='addItem' onSubmit={this.handleSubmit}>
                 <div className='location-group'>
                     <ul className='location-room'>
                         <li>
-                            <select classname='location'>
-                                <option selected='selected' value='home'>Home</option>
+                            <select className='location' id='location' onChange={this.handleChange}>
+                                <option selected='selected' value=''>Choose your location</option>
+                                <option value='home'>Home</option>
                                 <option value='business'>Business</option>
                                 <option value='storage'>Storage Unit</option>
                                 <option value='rv'>Recreational Vehicle</option>
                             </select>
-                            <label htmlFor='room'><span>Room: </span></label>
-                            <input type='text' id='room' className='room' value='' required={true} onChange={this.handleChange} />
+                            <input type='text' id='room' className='room' placeholder='Room' required={true} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>
                 <div className='item-group'>
                     <ul className='item-info'>
                         <li>
-                            <label htmlFor='item'><span>Item: </span></label>
-                            <input type='text' id='item' className='item' value='' required={true} onChange={this.handleChange} />
-                            <label htmlFor='manufacturer'><span>Manufacturer: </span></label>
-                            <input type='text' id='manufacturer' className='manufacturer' value='' required={false} onChange={this.handleChange} />
-                            <label htmlFor='serial_number'><span>Serial Number: </span></label>
-                            <input type='text' id='serial_number' className='serial_number' value='' required={false} onChange={this.handleChange} />
+                            <input type='text' id='item' className='item' placeholder='Item' required={true} onChange={this.handleChange} />
+                            <input type='text' id='manufacturer' className='manufacturer' placeholder='Manufacturer' required={false} onChange={this.handleChange} />
+                            <input type='text' id='serial_number' className='serial_number' placeholder='Serial Number' required={false} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>
                 <div className='value-group'>
                     <ul className='value-info'>
                         <li>
-                            <label htmlFor='year_acquired'><span>Year Acquired: </span></label>
-                            <input type='text' id='year_Acquired' className='year_acquired' value='               YYYY' required={true} onChange={this.handleChange} />
-                            <label htmlFor='purchase_price'><span>Purchase Price: </span></label>
-                            <input type='text' id='purchase_price' className='purchase_price' value='' required={true} onChange={this.handleChange} />
-                            <input type='hidden' id='user_id' className='user_id' value={this.props.auth.user.username} required={true} onChange={this.handleChange} />
+                            <input type='text' id='year_acquired' className='year_acquired' placeholder='Year Acquired (YYYY)' required={true} onChange={this.handleChange} />
+                            <input type='text' id='purchase_price' className='purchase_price' placeholder='Purchase Price' required={true} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>
+                <input className='submit' type='submit' value='Add Item' />
             </form>
         </div>
      );
@@ -60,9 +95,9 @@ AddForm.propTypes = {
   };
   
   const mapStateToProps = state => ({
-    auth: state.auth,
+    auth: state.auth
   });
-  
+    
   export default connect(
     mapStateToProps,
 )(AddForm);
