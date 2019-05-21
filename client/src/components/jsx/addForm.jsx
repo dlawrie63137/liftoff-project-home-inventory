@@ -47,7 +47,7 @@ class AddForm extends Component {
     
      return (
         <div className="container">
-            <Navbar2 />
+        <Navbar2 />
             <div className='title-add'>
                 <h2>Add Item</h2>
             </div>
