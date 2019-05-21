@@ -24,16 +24,16 @@ class Navbar2 extends Component {
               <h3 className="nameText">Home Inventory</h3>
                <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                     <Link className="nav-link" to="/add">Add</Link>
+                     <Link className="nav-link" to="/item/add">Add</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" to="/update">Update</Link>
+                     <Link className="nav-link" to="/item/update/:id">Update</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" to="/delete">Delete</Link>
+                     <Link className="nav-link" to="/item/delete">Delete</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" to="/view">View</Link>
+                     <Link className="nav-link" to="/item/view">View</Link>
                   </li>
                   <li className="nav-item">
                      <Link className="nav-link" to="/" onClick={this.onLogoutClick}>Logout</Link>
