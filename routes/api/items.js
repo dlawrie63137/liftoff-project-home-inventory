@@ -27,6 +27,14 @@ router.post('/add', (req, res) => {
         .catch(err => console.log(err));
     });
 
-   
+ // GET route for Item
+ router.get('/view', function(req, res, next) {
+    Item.find({})
+    .then(function(items) {
+        res.send(items);
+        //console.log(items, this.props.auth.user_id);
+    });
+ });   
+
         
 module.exports = router;        
