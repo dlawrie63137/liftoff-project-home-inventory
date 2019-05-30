@@ -5,10 +5,12 @@ import { logoutUser } from "../../actions/authActions";
 
 class TableRow extends Component {
 
-
+    
 
   render() {
-      if (this.props.obj.user_id === this.props.auth.user.username) {
+      if (this.props.obj.user_id === this.props.auth.user.username ) {
+      //&& this.props.obj.location === 'Home'
+         
         return (
             <tr>
               <td>

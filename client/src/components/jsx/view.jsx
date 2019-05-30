@@ -36,7 +36,7 @@ class View extends Component {
          <div className="container">
          <Navbar2 />
              <div className='inventory'>
-               <h3 align="center">Inventory List</h3>
+               <h3 className='invListTitle' align="center">Inventory List</h3>
                <table className="table table-striped" style={{ marginTop: 20 }}>
                   <thead>
                     <tr>
