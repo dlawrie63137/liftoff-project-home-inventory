@@ -11,7 +11,7 @@ class AddForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            location: '',
+            location: 'Home',
             room: '',
             item: '',
             manufacturer: '',
@@ -76,7 +76,13 @@ class AddForm extends Component {
                 <div className='location-group'>
                     <ul className='location-room'>
                         <li className='location-item'>
-                        <input type='text' id='location' className='location' placeholder='Location'  required={true} onChange={this.handleChange} />
+                        <select className='location' id='location' required={true} onChange={this.handleChange}>
+                                <option defaultValue=''>Choose your location</option>
+                                <option value='Home'>Home</option>
+                                <option value='Business'>Business</option>
+                                <option value='Storage'>Storage Unit</option>
+                                <option value='RV'>Recreational Vehicle</option>
+                        </select>
                             <input type='text' id='room' className='room' placeholder='Room'  required={true} onChange={this.handleChange} />
                             <input type='text' id='item' className='item' placeholder='Item'  required={true} onChange={this.handleChange} />
                         </li>

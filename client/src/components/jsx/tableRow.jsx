@@ -2,10 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions";
+import Axios from 'axios';
 
 class TableRow extends Component {
 
+  constructor(props) {
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
 
+  handleDelete() {
+    Axios.get('/api/items/delete/' + this.props.obj._id)
+    .then(console.log('Deleted'))
+    .catch(err => console.log(err))
+  }
 
   render() {
       if (this.props.obj.user_id === this.props.auth.user.username) {
@@ -39,7 +49,7 @@ class TableRow extends Component {
                 <button className="btn btn-primary">Edit</button>
               </td>
               <td>
-                <button className="btn btn-danger">Delete</button>
+                <button onClick={this.handleDelete} className="btn btn-danger">Delete</button>
               </td>
             </tr>
         );

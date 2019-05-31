@@ -36,5 +36,12 @@ router.post('/add', (req, res) => {
     });
  });   
 
+ // Delete item route
+ router.get('/delete/:id', function(req, res, next) {
+     Item.findByIdAndRemove({_id: req.params.id})
+     .then(function(items) {
+         res.send(items);
+    });
+ });
         
 module.exports = router;        
