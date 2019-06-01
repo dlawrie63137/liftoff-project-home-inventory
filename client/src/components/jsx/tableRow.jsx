@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions";
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
+
+
 
 class TableRow extends Component {
 
@@ -47,10 +50,11 @@ class TableRow extends Component {
                 {this.props.obj.purchase_price}
               </td>
               <td>
-                <button className="btn btn-primary">Edit</button>
+                <Link to={"/item/edit/"+this.props.obj._id} className="btn btn-primary">Edit</Link>
               </td>
               <td>
                 <button onClick={this.handleDelete} className="btn btn-danger">Delete</button>
+                
               </td>
             </tr>
         );

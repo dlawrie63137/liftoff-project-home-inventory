@@ -19,6 +19,7 @@ import AddForm from "./components/jsx/addForm.jsx";
 import Update from "./components/jsx/update.jsx";
 import Delete from "./components/jsx/delete.jsx";
 import View from "./components/jsx/view.jsx";
+import Edit from "./components/jsx/edit";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -55,6 +56,7 @@ class App extends Component {
                        <PrivateRoute exact path="/success" component={Success} />
                        <PrivateRoute exact path="/item/add" component={AddForm} />
                        <PrivateRoute exact path="/item/delete" component={Delete} />
+                       <PrivateRoute exact path='/item/edit/:id' component={ Edit } />
                        <PrivateRoute exact path="/item/update/:id" component={Update} />
                        <PrivateRoute exact path="/item/view" component={View} />
                     </Switch>

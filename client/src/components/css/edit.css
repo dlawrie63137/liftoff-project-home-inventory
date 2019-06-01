@@ -1,0 +1,95 @@
+.addItem {
+    margin-top: 20%;
+    margin-left: 5%;
+    background-color: lightgrey;
+    border: 10px;
+    border-color: red;
+    border-style: ridge;
+    padding-top: 5%;
+    padding-right: 10%;
+    padding-left: 1%;
+    padding-bottom: 10%;
+}
+h2 {
+    margin-block: 2%;
+}
+.item {
+    margin-left: 1%;
+    max-width: 120px;
+    padding-left: 1%;
+}
+.lblPrice {
+    margin-left: 15%;
+    margin-right: 0%;
+}
+.location {
+    max-width: 120px;
+}
+.location-group {
+    padding-left: 0%;
+    max-width: 700px;
+    margin-bottom: 8%;
+    margin-left: 14%;
+    margin-top: 10%;
+}
+.location-room li {
+    display: block;
+    margin-bottom: 10px;
+	min-height: 35px;
+    
+}
+.manufacturer {
+    max-width: 120px;
+    margin-left: 1%;
+    padding-left: 1%;
+}
+.manufacturer-group {
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-bottom: 9%;
+}
+.model {
+    margin-left: 1%;
+    max-width: 120px;
+    padding-left: 1%;
+}
+.purchase_price {
+    margin-left: 2%;
+    max-width: 120px;;
+    padding-left: 1%;
+}
+.room {
+    max-width: 120px;;
+    margin-left: 1%;
+    padding-left: 1%;
+}
+.serial_number {
+    max-width: 120px;
+    margin-left: 0%;
+    padding-left: 1%;
+}
+.submit {
+    margin-left: 14%;
+    margin-top: 10%;
+}
+.title-add {
+    margin-top: 15%;
+    margin-bottom: -15%;
+}
+.value-group {
+    margin-top: 6%;
+    margin-left: -2%;
+}
+.year_acquired {
+    margin-left: 0%;
+    margin-right: 4%;
+    padding-left: 1%;
+    max-width: 120px;
+}
+label {
+    margin-left: 30px;
+    margin-right: 10px;
+}
+select {
+    max-width: 350px;
+}
