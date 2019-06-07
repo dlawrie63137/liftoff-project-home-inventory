@@ -46,21 +46,21 @@ router.get('/edit/:id', (req, res) => {
  });
 
  router.post('/update/:id', (req, res) => {
-    Item.findById(req.params.id) 
-    if (!Item) {
-      res.status(404).send("data is not found");
-    }else {
-        location = req.body.location,
-        room = req.body.room,
-        item = req.body.item,
-        manufacturer = req.body.manufacturer,
-        model = req.body.model,
-        serial_number = req.body.serial_number,
-        year_acquired = req.body.year_acquired,
-        purchase_price = req.body.purchase_price,
-        user_id = req.body.user_id
+    Item.findById(req.params.id, (err, item) => {
+       if (!item)
+           res.status(404).send("data is not found");
+       else {
+        item.location = req.body.location,
+        item.room = req.body.room,
+        item.item = req.body.item,
+        item.manufacturer = req.body.manufacturer,
+        item.model = req.body.model,
+        item.serial_number = req.body.serial_number,
+        item.year_acquired = req.body.year_acquired,
+        item.purchase_price = req.body.purchase_price,
+        item.user_id = req.body.user_id
 
-        Item.save().then(item => {
+        item.save().then(item => {
           res.json('Update complete');
       })
       .catch(err => {
@@ -68,6 +68,7 @@ router.get('/edit/:id', (req, res) => {
       });
     }
   });
+});
 
  // Delete item route
  router.get('/delete/:id', function(req, res, next) {

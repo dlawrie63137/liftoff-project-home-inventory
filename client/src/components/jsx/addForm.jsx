@@ -76,32 +76,39 @@ class AddForm extends Component {
                 <div className='location-group'>
                     <ul className='location-room'>
                         <li className='location-item'>
+                        <label htmlFor='location'>Location: </label>
                         <select className='location' id='location' required={true} onChange={this.handleChange}>
-                                <option defaultValue=''>Choose your location</option>
-                                <option value='Home'>Home</option>
+                                <option defaultValue='Home'>Home</option>
                                 <option value='Business'>Business</option>
                                 <option value='Storage'>Storage Unit</option>
                                 <option value='RV'>Recreational Vehicle</option>
                         </select>
-                            <input type='text' id='room' className='room' placeholder='Room'  required={true} onChange={this.handleChange} />
-                            <input type='text' id='item' className='item' placeholder='Item'  required={true} onChange={this.handleChange} />
+                        <label htmlFor='room'>Room:</label>
+                            <input type='text' id='room' className='room' required={true} onChange={this.handleChange} />
+                        <label htmlFor='item'>Item:</label>
+                            <input type='text' id='item' className='item' required={true} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>
                 <div className='manufacturer-group'>
                     <ul className='manufacturer-info'>
-                        <li>                            
-                            <input type='text' id='manufacturer' className='manufacturer' placeholder='Manufacturer'  required={true} onChange={this.handleChange} />
-                            <input type='text' id='model' className='model' placeholder='Model'  required={true} onChange={this.handleChange} />
-                            <input type='text' id='serial_number' className='serial_number' placeholder='Serial Number'  required={true} onChange={this.handleChange} />
+                        <li>
+                        <label htmlFor='manufacturer'>Manufacturer:</label>                             
+                            <input type='text' id='manufacturer' className='manufacturer' required={true} onChange={this.handleChange} />
+                        <label htmlFor='model'>Model:</label>
+                            <input type='text' id='model' className='model' required={true} onChange={this.handleChange} />
+                        <label htmlFor='serial_number'>Ser #:</label>
+                            <input type='text' id='serial_number' className='serial_number' required={true} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>
                 <div className='value-group'>
                     <ul className='value-info'>
                         <li>
-                            <input type='text' id='year_acquired' className='year_acquired' placeholder='Year Acquired (YYYY)'  required={true} onChange={this.handleChange} />
-                            <input type='text' id='purchase_price' className='purchase_price' placeholder='Purchase Price'  required={true} onChange={this.handleChange} />
+                        <label htmlFor='year_acquired'>Yr Acquired (YYYY):</label>
+                            <input type='text' id='year_acquired' className='year_acquired' required={true} onChange={this.handleChange} />
+                        <label htmlFor='purchase_price' className='lblPrice'>Purchase Price:</label>
+                            <input type='text' id='purchase_price' className='purchase_price' required={true} onChange={this.handleChange} />
                         </li>
                     </ul>
                 </div>

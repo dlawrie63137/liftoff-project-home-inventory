@@ -14,19 +14,22 @@ h2 {
     margin-block: 2%;
 }
 .item {
-    margin-left: 3%;
-    max-width: 170px;
+    margin-left: 1%;
+    max-width: 120px;
     padding-left: 1%;
 }
+.lblPrice {
+    margin-left: 15%;
+    margin-right: 0%;
+}
 .location {
-    align-content: center;
-    max-width: 173px;
+    max-width: 120px;
 }
 .location-group {
     padding-left: 0%;
     max-width: 700px;
     margin-bottom: 8%;
-    margin-left: 18%;
+    margin-left: 14%;
     margin-top: 10%;
 }
 .location-room li {
@@ -36,33 +39,33 @@ h2 {
     
 }
 .manufacturer {
-    max-width: 175px;
-    margin-left: -3%;
+    max-width: 120px;
+    margin-left: 1%;
     padding-left: 1%;
 }
 .manufacturer-group {
     margin-top: 5%;
-    margin-left: 16%;
+    margin-left: 2%;
     margin-bottom: 9%;
 }
 .model {
-    margin-left: 3%;
-    max-width: 200px;
+    margin-left: 1%;
+    max-width: 120px;
     padding-left: 1%;
 }
 .purchase_price {
-    margin-left: 25%;
-    max-width: 170px;;
+    margin-left: 2%;
+    max-width: 120px;;
     padding-left: 1%;
 }
 .room {
-    max-width: 200px;;
-    margin-left: 3%;
+    max-width: 120px;;
+    margin-left: 1%;
     padding-left: 1%;
 }
 .serial_number {
-    max-width: 175px;
-    margin-left: 2%;
+    max-width: 120px;
+    margin-left: 0%;
     padding-left: 1%;
 }
 .submit {
@@ -75,13 +78,13 @@ h2 {
 }
 .value-group {
     margin-top: 6%;
-    margin-left: 7%;
+    margin-left: -2%;
 }
 .year_acquired {
-    margin-left: 8%;
+    margin-left: 0%;
     margin-right: 4%;
     padding-left: 1%;
-    max-width: 175px;
+    max-width: 120px;
 }
 label {
     margin-left: 30px;

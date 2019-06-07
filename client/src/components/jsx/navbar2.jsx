@@ -27,12 +27,6 @@ class Navbar2 extends Component {
                      <Link className="nav-link" to="/item/add">Add</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" to="/item/update/:id">Update</Link>
-                  </li>
-                  <li className="nav-item">
-                     <Link className="nav-link" to="/item/delete">Delete</Link>
-                  </li>
-                  <li className="nav-item">
                      <Link className="nav-link" to="/item/view">View</Link>
                   </li>
                   <li className="nav-item">

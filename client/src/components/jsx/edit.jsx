@@ -108,6 +108,7 @@ export default class Edit extends Component {
         .then(res => console.log(res.data));
     
     this.props.history.push('/item/view');
+    window.location.reload();
   }
  
   render() {
@@ -123,12 +124,12 @@ export default class Edit extends Component {
                     <ul className='location-room'>
                         <li className='location-item'>
                           <label htmlFor='location'>Location: </label>
-                        <select className='location' id='location' required={true} onChange={this.handleChangeLocation}>
+                        <select className='location' id='location' required={false} onChange={this.handleChangeLocation}>
                                 <option defaultValue={this.state.location}>{this.state.location}</option>
                                 <option value='Home'>Home</option>
                                 <option value='Business'>Business</option>
-                                <option value='Storage'>Storage Unit</option>
-                                <option value='RV'>Recreational Vehicle</option>
+                                <option value='Storage Unit'>Storage Unit</option>
+                                <option value='RV'>RV</option>
                         </select>
                         <label htmlFor='room'>Room:</label>
                             <input type='text' id='room' className='room' value={this.state.room}  required={true} onChange={this.handleChangeRoom} />
