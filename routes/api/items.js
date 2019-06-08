@@ -32,6 +32,7 @@ router.post('/add', (req, res) => {
     let id = req.params.id;
     Item.find({user_id: id})
     .then(function(items) {
+        items.sort((a, b) => (a.location > b.location) ? 1 : -1);
         res.send(items);
     });
  });   

@@ -19,7 +19,7 @@ class View extends Component {
         axios.get('/api/items/view/' + id)
         .then(response => {
           this.setState({ item: response.data });
-          })
+         })
         .catch(function (error) {
             console.log(error);
           });
