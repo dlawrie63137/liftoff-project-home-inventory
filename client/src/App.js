@@ -58,7 +58,7 @@ class App extends Component {
                        <PrivateRoute exact path="/item/delete" component={Delete} />
                        <PrivateRoute exact path='/item/edit/:id' component={ Edit } />
                        <PrivateRoute exact path="/item/update/:id" component={Update} />
-                       <PrivateRoute exact path="/item/view" component={View} />
+                       <PrivateRoute exact path="/item/view/:id" component={View} />
                     </Switch>
                     <Route path="/contact" component={Contact} />
                 <Footer />

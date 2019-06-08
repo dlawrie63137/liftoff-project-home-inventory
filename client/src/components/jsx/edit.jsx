@@ -14,6 +14,7 @@ export default class Edit extends Component {
     this.handleChangeSerialNumber = this.handleChangeSerialNumber.bind(this);
     this.handleChangeYearAcquired = this.handleChangeYearAcquired.bind(this);
     this.handleChangePurchasePrice = this.handleChangePurchasePrice.bind(this);
+    
 
 
     this.state = {
@@ -30,7 +31,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-      axios.get('/api/items/edit/'+this.props.match.params.id)
+      axios.get('/api/items/edit/'+ this.props.match.params.id)
           .then(response => {
               this.setState({ 
                 location: response.data.location, 
@@ -104,10 +105,10 @@ export default class Edit extends Component {
         purchase_price: this.state.purchase_price,
         user_id: this.state.user_id
     };
-    axios.post('/api/items/update/'+this.props.match.params.id, obj)
+    axios.post('/api/items/update/' + this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     
-    this.props.history.push('/item/view');
+    this.props.history.push('/item/view/' + this.state.user_id);
     window.location.reload();
   }
  

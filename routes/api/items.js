@@ -28,11 +28,11 @@ router.post('/add', (req, res) => {
     });
 
  // GET route for Item
- router.get('/view', function(req, res, next) {
-    Item.find({})
+ router.get('/view/:id', function(req, res, next) {
+    let id = req.params.id;
+    Item.find({user_id: id})
     .then(function(items) {
         res.send(items);
-        //console.log(items, this.props.auth.user_id);
     });
  });   
 

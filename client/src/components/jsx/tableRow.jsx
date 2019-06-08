@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
-import { connect } from "react-redux"
+import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ class TableRow extends Component {
   }
 
   render() {
-      if (this.props.obj.user_id === this.props.auth.user.username) {
+      
         return (
             <tr>
               <td>
@@ -59,9 +59,8 @@ class TableRow extends Component {
             </tr>
         );
       };
-      return null;
+      
     };
-}
 
 TableRow.propTypes = {
   logoutUser: PropTypes.func.isRequired,

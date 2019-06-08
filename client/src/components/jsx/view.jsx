@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
 import axios from 'axios';
 import Navbar2 from './navbar2.jsx';
 import TableRow from './tableRow.jsx';
@@ -12,10 +15,10 @@ class View extends Component {
         this.state = {item: []};
       }
       componentDidMount(){
-        axios.get('/api/items/view')
+        let id = this.props.auth.user.username;
+        axios.get('/api/items/view/' + id)
         .then(response => {
           this.setState({ item: response.data });
-          //console.log(this.state.item);
           })
         .catch(function (error) {
             console.log(error);
@@ -23,9 +26,9 @@ class View extends Component {
       }
       
       tabRow(){
-        //console.log(this.state.item[2], this.props.auth.user.username)
+        
             return this.state.item.map(function(object, i){
-              console.log(object);
+              
               return <TableRow obj={object} key={i} />;
                 });
               };
@@ -61,4 +64,16 @@ class View extends Component {
     }
 }
 
-export default View
+View.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(View);
