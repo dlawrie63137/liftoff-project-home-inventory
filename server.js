@@ -42,4 +42,5 @@ app.use("/api/items", items);
 
 const port = process.env.PORT || 5000;
 
+app.timeout = 0;
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));

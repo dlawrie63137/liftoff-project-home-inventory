@@ -14,6 +14,7 @@ class View extends Component {
         super(props);
         this.state = {item: []};
       }
+      
       componentDidMount(){
         let id = this.props.auth.user.username;
         axios.get('/api/items/view/' + id)

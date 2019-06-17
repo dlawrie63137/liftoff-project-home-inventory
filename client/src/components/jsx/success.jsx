@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import { logoutUser } from "../../actions/authActions";
 import Navbar2 from './navbar2';
 import '../css/success.css';
-//import store from "../../store";
 
 
 class Success extends Component {
@@ -24,11 +23,10 @@ class Success extends Component {
               <p>You are logged in as '{ this.props.auth.user.username }'</p>
             </div>
             <div className="link-info">
-                <h4 className="line-text">Click <strong>Add</strong> to add items to your inventory.</h4><br />
-                <h4 className="line-text" >Click <strong>Update</strong> to change items in your inventory.</h4><br />
-                <h4 className="line-text" >Click <strong>Delete</strong> to remove items from your inventory.</h4><br />
-                <h4 className="line-text" >Click <strong>View</strong> to list items in your inventory.</h4><br />
-                <h4 className="line-text">Click <strong>Logout</strong> to exit program.</h4>
+                <h4 className="line-text">Click <strong>Add</strong> in upper right to add items to your inventory.</h4><br />
+                <h4 className="line-text" >Click <strong>View</strong> in upper right to list items in your inventory.</h4><br />
+                <h4 className="line-text" >From <strong>View</strong> you may Edit/Update or Delete items in your inventory.</h4><br />
+                <h4 className="line-text">Click <strong>Logout</strong> in upper right to exit program.</h4>
             </div>
             </div>
           </div>
