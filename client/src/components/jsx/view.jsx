@@ -17,7 +17,11 @@ class View extends Component {
       
       componentDidMount(){
         let id = this.props.auth.user.username;
-        axios.get('/api/items/view/' + id)
+        let querystring = window.location.search;
+        let urlParam = new URLSearchParams(querystring);
+        let loc = urlParam.get('loc');
+        console.log(id, loc);
+        axios.get('/api/items/view/' + id, {params: {location: loc}})
         .then(response => {
           this.setState({ item: response.data });
          })

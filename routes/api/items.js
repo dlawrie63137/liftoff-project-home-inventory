@@ -30,7 +30,8 @@ router.post('/add', (req, res) => {
  // GET route for Item
  router.get('/view/:id', function(req, res, next) {
     let id = req.params.id;
-    Item.find({user_id: id})
+    let loc = req.query.location;
+    Item.find({user_id: id, location: loc})
     .then(function(items) {
         items.sort((a, b) => (a.location > b.location) ? 1 : -1);
         res.send(items);

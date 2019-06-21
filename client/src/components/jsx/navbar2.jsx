@@ -11,6 +11,11 @@ class Navbar2 extends Component {
         console.log(this.props.user);
         this.props.logoutUser();
       };
+
+    handleClick = e => {
+     this.props.history.push('/item/view/' + this.state.user_id + '?loc={this.value}');
+     window.location.reload();
+    };
       
     render() {
           
@@ -27,7 +32,17 @@ class Navbar2 extends Component {
                      <Link className="nav-link" to="/item/add">Add</Link>
                   </li>
                   <li className="nav-item">
-                     <Link className="nav-link" to={`/item/view/${this.props.auth.user.username}`}>View</Link>
+                    <div className="dropdown show">
+                      <Link className="btn btn-secondary btn-md dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         View
+                      </Link>
+                       <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                         <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=Home`} value='Home' onClick={this.handleClick}>Home</Link>
+                         <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=Business`} value='Business' onClick={this.handleClick}>Business</Link>
+                         <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=Storage`} value='Storage' onClick={this.handleClick}>Storage Unit</Link>
+                         <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=RV`} value='RV' onClick={this.handleClick}>Recreational Vehicle</Link>
+                       </div>
+                    </div>
                   </li>
                   <li className="nav-item">
                      <Link className="nav-link" to="/" onClick={this.onLogoutClick}>Logout</Link>
