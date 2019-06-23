@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-//import axios from 'axios';
 import { logoutUser } from "../../actions/authActions";
 import '../css/navbar2.css';
 import logo from '../assets/mblogo_sphere.png';
@@ -46,6 +45,9 @@ class Navbar2 extends Component {
                          <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=All`} value='All' onClick={this.handleClick}>All</Link>
                        </div>
                     </div>
+                  </li>
+                  <li className="nav-item">
+                     <Link className="nav-link" to="/item/contact">Contact</Link>
                   </li>
                   <li className="nav-item">
                      <Link className="nav-link" to="/" onClick={this.onLogoutClick}>Logout</Link>

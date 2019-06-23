@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import Navbar from '../components/jsx/navbar.jsx';
-import './css/contact.css';
+import Navbar2 from './navbar2.jsx';
+//import Footer from '../components/jsx/footer.jsx';
+import '../css/contact2.css';
 
-class Contact extends Component {
+class Contact2 extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <Navbar2 />
                 <div className='container'>
                    <h1>Contact</h1>
                     <div className='text-content'>
@@ -18,6 +19,6 @@ class Contact extends Component {
             </div>
         );
     };
-}
+};
 
-export default Contact
+export default Contact2

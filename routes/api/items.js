@@ -32,8 +32,6 @@ router.post('/add', (req, res) => {
     let id = req.params.id;
     let loc = req.query.location;
             
-    console.log(loc + ' in items');
-
     if (loc==='All'){
        Item.find({user_id: id})
        .then(function(items) {
