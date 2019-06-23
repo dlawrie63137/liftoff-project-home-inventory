@@ -20,15 +20,18 @@ class View extends Component {
         let querystring = window.location.search;
         let urlParam = new URLSearchParams(querystring);
         let loc = urlParam.get('loc');
+        
         console.log(id, loc);
+
         axios.get('/api/items/view/' + id, {params: {location: loc}})
         .then(response => {
           this.setState({ item: response.data });
-         })
+        })
         .catch(function (error) {
             console.log(error);
           });
-      }
+        } 
+      
       
       tabRow(){
         
@@ -36,7 +39,7 @@ class View extends Component {
               
               return <TableRow obj={object} key={i} />;
                 });
-              };
+              }
                  
     render() {
     

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+//import axios from 'axios';
 import { logoutUser } from "../../actions/authActions";
 import '../css/navbar2.css';
 import logo from '../assets/mblogo_sphere.png';
@@ -16,7 +17,8 @@ class Navbar2 extends Component {
      this.props.history.push('/item/view/' + this.state.user_id + '?loc={this.value}');
      window.location.reload();
     };
-      
+
+              
     render() {
           
         return (
@@ -33,7 +35,7 @@ class Navbar2 extends Component {
                   </li>
                   <li className="nav-item">
                     <div className="dropdown show">
-                      <Link className="btn btn-secondary btn-md dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <Link className="btn btn-secondary btn-md dropdown-toggle" to="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          View
                       </Link>
                        <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -41,6 +43,7 @@ class Navbar2 extends Component {
                          <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=Business`} value='Business' onClick={this.handleClick}>Business</Link>
                          <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=Storage`} value='Storage' onClick={this.handleClick}>Storage Unit</Link>
                          <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=RV`} value='RV' onClick={this.handleClick}>Recreational Vehicle</Link>
+                         <Link className="dropdown-item" to={`/item/view/${this.props.auth.user.username}?loc=All`} value='All' onClick={this.handleClick}>All</Link>
                        </div>
                     </div>
                   </li>

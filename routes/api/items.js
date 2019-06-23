@@ -31,13 +31,25 @@ router.post('/add', (req, res) => {
  router.get('/view/:id', function(req, res, next) {
     let id = req.params.id;
     let loc = req.query.location;
-    Item.find({user_id: id, location: loc})
-    .then(function(items) {
-        items.sort((a, b) => (a.location > b.location) ? 1 : -1);
-        res.send(items);
-    });
- });   
+            
+    console.log(loc + ' in items');
 
+    if (loc==='All'){
+       Item.find({user_id: id})
+       .then(function(items) {
+         items.sort((a, b) => (a.location > b.location) ? 1 : -1);
+         res.send(items);
+        });
+    } else {
+        Item.find({user_id: id, location: loc})
+        .then(function(items) {
+         items.sort((a, b) => (a.room > b.room) ? 1 : -1);
+         res.send(items);
+        });
+    }
+   }   
+);   
+        
  // Defined edit route
 router.get('/edit/:id', (req, res) => {
     let id = req.params.id;
