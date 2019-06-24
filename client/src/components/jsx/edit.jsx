@@ -108,7 +108,7 @@ export default class Edit extends Component {
     axios.post('/api/items/update/' + this.props.match.params.id, obj)
         .then(res => console.log(res.data));
     
-    this.props.history.push('/item/view/' + this.state.user_id);
+    this.props.history.push('/item/view/' + this.state.user_id + '?loc=All');
     window.location.reload();
   }
  
