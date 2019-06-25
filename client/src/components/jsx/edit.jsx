@@ -52,8 +52,8 @@ export default class Edit extends Component {
     handleChangeLocation = (e) => {
     this.setState({
       location: e.target.value
-    });
-  };
+    })
+  }
   handleChangeRoom = (e) => {
     this.setState({
       room: e.target.value
@@ -67,7 +67,7 @@ export default class Edit extends Component {
   handleChangeManufacturer = (e) => {
     this.setState({
       manufacturer: e.target.value
-    });
+    })
   }
   handleChangeModel = (e) => {
     this.setState({
@@ -83,7 +83,7 @@ export default class Edit extends Component {
   handleChangeYearAcquired = (e) => {
     this.setState({
       year_acquired: e.target.value
-    });
+    })
   }
   handleChangePurchasePrice = (e) => {
     this.setState({
